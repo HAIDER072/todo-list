@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css"> <!-- I've spent several days trying to solve the "Refused to apply style..." error. Just make sure that the file names are correct -->
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <title>Todo List By DhaniDesigns</title>
+</head>
+<body>
+    <div class="decorations <%= bgColor %>">
+        <div class="left-top">
+            <div class="dec-1"></div>
+            <div class="dec-2"></div>
+        </div>
+        <div class="right-top">
+            <div class="dec-1"></div>
+            <div class="dec-2"></div>
+        </div>
+        <div class="left-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="197" height="179" viewBox="0 0 197 179" fill="none" class="dec-1">
+                <path d="M30.7619 5.39095C104.236 -17.3652 178.723 51.6811 194.464 85.585C210.205 119.489 141.791 126.916 162.376 152.869C182.961 178.821 79.8364 193.211 0.278467 152.869L30.7619 5.39095Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="253" height="190" viewBox="0 0 253 190" fill="none" class="dec-2">
+                <path d="M0.689355 53.9155C45.5421 -8.57037 121.29 -18.1633 149.165 36.6604C177.039 91.484 252.834 49.9044 252.834 77.306C252.834 104.708 153.168 174.062 65.3841 189.906L0.689355 53.9155Z" />
+            </svg>
+        </div>
+        <div class="right-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="166" height="170" viewBox="0 0 166 170" fill="none" class="dec-1">
+                <path d="M135.256 4.39087C61.7825 -18.3653 -29.0393 60.1703 10.213 78.2264C49.4653 96.2825 -3.13315 151.868 25.9137 151.868C54.9605 151.868 86.1818 192.211 165.74 151.868L135.256 4.39087Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="213" height="172" viewBox="0 0 213 172" fill="none" class="dec-2">
+                <path d="M212.328 35.9154C167.476 -26.5704 149.848 12.0547 101.961 12.0546C54.0726 12.0545 69.7737 65.4382 15.6049 71.7187C-38.5638 77.9992 59.8499 156.062 147.633 171.906L212.328 35.9154Z" />
+            </svg>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div class="nav-underline basic <%= currentBasic %>">
+                <a href="/" class="nav-button <%= mainColor %>">Basic</a>
+            </div>
+            <div class="nav-underline work <%= currentWork %>">
+                <a href="/work" class="nav-button <%= mainColor %>">Work</a>
+            </div>
+        </nav>
+        <h1 class="<%= mainColor%>"><%= currentList %> List</h1>
+    </header>

@@ -1,0 +1,93 @@
+<%- include("partials/header.ejs") %>
+
+    <main>
+        <div class="todo-list-wrapper">
+                        <div class="todo-list-inner-wrapper">
+                            <div class="todo-list <%= addListButtonMain %>">
+                                <p class="date-created">
+                                    <%= dateDefault %>
+                                </p>
+                                <div class="list-item-wrapper">
+                                    <% if (todoListItem.length) { %>
+                                        <%- todoListItem %>
+                                    <% } else { %>
+                                        <p class="empty-list-item-text"><em>No todo list item found!</em></p>
+                                    <% } %>
+
+                                    <!-- <div class="list-item">
+                                        <label><input type="checkbox">
+                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="checkbox">
+                                                <rect x="0.367676" y="0.22583" width="11.6852" height="11.6852" rx="3"
+                                                    fill="black" fill-opacity="0.4" class="checkbox-fill" />
+                                                <rect x="0.867676" y="0.72583" width="10.6852" height="10.6852" rx="2.5"
+                                                    stroke="black" stroke-opacity="0.3" class="checkbox-outline" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3.72798 5.51011L3.012 6.2261L5.31541 8.52951L9.40864 4.43628L8.65008 3.67773L5.27284 7.05497L3.72798 5.51011Z"
+                                                    fill="white" class="checkbox-checkmark" />
+                                            </svg>
+                                            <div class="item-text">Todo list item 1</div>
+                                        </label>
+                                    </div>
+                                    <div class="list-item">
+                                        <label><input type="checkbox">
+                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="checkbox">
+                                                <rect x="0.367676" y="0.22583" width="11.6852" height="11.6852" rx="3"
+                                                    fill="black" fill-opacity="0.4" class="checkbox-fill" />
+                                                <rect x="0.867676" y="0.72583" width="10.6852" height="10.6852" rx="2.5"
+                                                    stroke="black" stroke-opacity="0.3" class="checkbox-outline" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3.72798 5.51011L3.012 6.2261L5.31541 8.52951L9.40864 4.43628L8.65008 3.67773L5.27284 7.05497L3.72798 5.51011Z"
+                                                    fill="white" class="checkbox-checkmark" />
+                                            </svg>
+                                            <div class="item-text">Todo list item 2</div>
+                                        </label>
+                                    </div>
+                                    <div class="list-item">
+                                        <label><input type="checkbox">
+                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="checkbox">
+                                                <rect x="0.367676" y="0.22583" width="11.6852" height="11.6852" rx="3"
+                                                    fill="black" fill-opacity="0.4" class="checkbox-fill" />
+                                                <rect x="0.867676" y="0.72583" width="10.6852" height="10.6852" rx="2.5"
+                                                    stroke="black" stroke-opacity="0.3" class="checkbox-outline" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3.72798 5.51011L3.012 6.2261L5.31541 8.52951L9.40864 4.43628L8.65008 3.67773L5.27284 7.05497L3.72798 5.51011Z"
+                                                    fill="white" class="checkbox-checkmark" />
+                                            </svg>
+                                            <div class="item-text">Todo list item 3</div>
+                                        </label>
+                                    </div>
+                                    <div class="list-item">
+                                        <label><input type="checkbox">
+                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="checkbox">
+                                                <rect x="0.367676" y="0.22583" width="11.6852" height="11.6852" rx="3"
+                                                    fill="black" fill-opacity="0.4" class="checkbox-fill" />
+                                                <rect x="0.867676" y="0.72583" width="10.6852" height="10.6852" rx="2.5"
+                                                    stroke="black" stroke-opacity="0.3" class="checkbox-outline" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3.72798 5.51011L3.012 6.2261L5.31541 8.52951L9.40864 4.43628L8.65008 3.67773L5.27284 7.05497L3.72798 5.51011Z"
+                                                    fill="white" class="checkbox-checkmark" />
+                                            </svg>
+                                            <div class="item-text">Todo list item 4</div>
+                                        </label>
+                                    </div>
+                                </div> -->
+                                
+                            </div>
+                            <form action="<%= formAction %>" method="post" class="add-item-wrapper">
+                                <input type="text" name="todoAdd" id="todo-add" placeholder="Add New Item...">
+                                <button type="submit" class="add-item"><svg class="add-icon list" width="22" height="22"
+                                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10.5589" cy="10.8837" r="10.0303" stroke="#B3B3B3" />
+                                        <path d="M10.5588 5.57489V16.1923" stroke="#B3B3B3" />
+                                        <path d="M5.25012 10.8836H15.8675" stroke="#B3B3B3" />
+                                    </svg></button>
+                            </form>
+                        </div>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
